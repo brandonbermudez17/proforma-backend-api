@@ -1,0 +1,12 @@
+development = true
+log_path = "./logs.log"
+host = "localhost"
+port = 7000
+
+[database]
+server = "lallah.db.elephantsql.com"
+port = 5432
+user = "owayeogs"
+password = "gd3CXTSkqm-1tlRytiomeRxYCsxd8LPb"
+name = "owayeogs"
+connection_max = 5000
