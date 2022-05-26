@@ -1,4 +1,4 @@
-development = true
+development = false
 log_path = "./logs.log"
 host = "localhost"
 port = 7000
