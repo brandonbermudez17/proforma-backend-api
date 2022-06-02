@@ -30,10 +30,11 @@ func getConfig() *DbConfig {
 func GetConnectionString() string {
 	config := getConfig()
 	dsn := fmt.Sprintf(
-		"host=%s user=%s password=%s dbname=%s sslmode=disable",
-		config.Host,
+		// "host=%s user=%s password=%s dbname=%s --set=sslmode=verify-full",
+		"postgresql://%s:%s@%s:25060/%s?sslmode=require",
 		config.User,
 		config.Password,
+		config.Host,
 		config.Database,
 	)
 	return dsn
