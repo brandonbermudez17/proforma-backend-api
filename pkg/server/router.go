@@ -4,11 +4,19 @@ import (
 	"proforma-backend-api/pkg/controllers"
 	"proforma-backend-api/pkg/middlewares"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
 func (s *Server) registerRoutes() {
-	s.Engine.Use(middlewares.GinRecovery(s.Log, true), middlewares.GinLogger(s.Log))
+	s.Engine.Use(
+		middlewares.GinRecovery(s.Log, true),
+		middlewares.GinLogger(s.Log),
+		cors.New(cors.Config{
+			AllowOrigins:     []string{"*"},
+			AllowMethods:     []string{"PUT", "PATCH", "POST", "DELETE", "GET"},
+			AllowCredentials: true,
+		}))
 
 	//initialize controllers
 	authController := controllers.NewAuthController(s.DB, s.Log)
