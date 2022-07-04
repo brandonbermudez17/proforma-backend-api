@@ -1,12 +1,12 @@
 development = false
 log_path = "./logs.log"
-host = "localhost"
-port = 7000
+#host = "localhost"
+#port = 7000
 
 [database]
-server = "lallah.db.elephantsql.com"
-port = 5432
-user = "owayeogs"
-password = "gd3CXTSkqm-1tlRytiomeRxYCsxd8LPb"
-name = "owayeogs"
+server = "db-postgresql-ams3-92011-do-user-11425618-0.b.db.ondigitalocean.com"
+port = 25060
+user = "doadmin"
+password = "AVNS_rthBNwlaI-AdV_Q"
+name = "defaultdb"
 connection_max = 5000
